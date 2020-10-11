@@ -10,7 +10,9 @@ namespace Sample.Novel.Application.Profiles
         public AuthorProfile()
         {
             CreateMap<CreateAuthorInput, Author>()
-                .Ignore(author => author.Id);
+                .Ignore(author => author.Id)
+                .Ignore(author => author.ConcurrencyStamp)
+                .Ignore(author => author.ExtraProperties);
 
             CreateMap<Author, AuthorDto>();
         }

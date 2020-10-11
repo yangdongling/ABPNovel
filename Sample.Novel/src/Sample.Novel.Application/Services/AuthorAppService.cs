@@ -51,7 +51,7 @@ namespace Sample.Novel.Application.Services
             return new PagedResultDto<AuthorDto>
             {
                 TotalCount = count,
-                Items = ObjectMapper.Map<List<Author>, List<AuthorDto>>(list);
+                Items = ObjectMapper.Map<List<Author>, List<AuthorDto>>(list)
             };
         }
     }
